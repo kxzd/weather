@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bundle.js" defer></script>
+</head>
+<body>
+    <div class="title"> Weather App</div>
+    <div class="search">
+        <div>
+        <form action="">
+            <label for="search">
+                <input type="text" id="search" name="search" placeholder="Enter city location" data-search-input>
+            </label>
+            <button class="search-button"><img src="img/search.png"></button>
+        </form>
+        </div>
+        <div>
+            <button class="temp-change">Display in °F</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-weather">
+            <span class="weather-type"></span> 
+            <span class="city-name"></span>
+            <div>
+                <span class="current-date"></span>
+                <span class="current-time"></span>
+            </div>
+            <span class="temp"></span>
+        </div>
+        <img class="weather-image">
+        <div class="extra-weather">
+            <div class="extra-info">
+                <img src="/dist/img/thermo.svg" class="extra-weather-image">  
+                <span class="feels-like"></span>
+            </div>
+            <div class="extra-info">
+                <img src="/dist/img/humidity.svg" class="extra-weather-image">  
+                <span class="humidity"></span>
+            </div>
+            <div class="extra-info">
+                <img src="/dist/img/wind.svg" class="extra-weather-image">  
+                <span class="wind"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
