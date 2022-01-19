@@ -16,8 +16,9 @@ const input = document.querySelector("[data-search-input]")
 const search = document.querySelector(".search-button")
 
 async function getWeather(units, city) {
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=7470ed2b0f9dc40d12a6d5af68a85501`
     try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=7470ed2b0f9dc40d12a6d5af68a85501`, {mode: 'cors'});
+        const response = await fetch(url, {mode: 'cors'});
         const data = await response.json();
         console.log(data);
 
@@ -68,21 +69,21 @@ function getWeatherImage(data) {
     const weather = data.weather[0].main;
     switch (weather) {
         case "Clear":
-            weatherImage.src = "/img/clear.svg";
+            weatherImage.src = "./img/clear.svg";
             break;
         case "Clouds":
-            weatherImage.src = "/img/cloudy.svg";
+            weatherImage.src = "./img/cloudy.svg";
             break;
         case "Rain":
         case "Drizzle":
         case "Mist":
-            weatherImage.src = "/img/rain.svg";
+            weatherImage.src = "./img/rain.svg";
             break;
         case "Thunderstorm":
-            weatherImage.src = "/img/thunder.svg";
+            weatherImage.src = "./img/thunder.svg";
             break;
         case "Snow":
-            weatherImage.src = "/img/snow.svg";
+            weatherImage.src = "./img/snow.svg";
             break;
         default: 
             weatherImage.src = ""
