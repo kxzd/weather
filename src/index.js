@@ -68,21 +68,21 @@ function getWeatherImage(data) {
     const weather = data.weather[0].main;
     switch (weather) {
         case "Clear":
-            weatherImage.src = "img/clear.svg";
+            weatherImage.src = "/img/clear.svg";
             break;
         case "Clouds":
-            weatherImage.src = "img/cloudy.svg";
+            weatherImage.src = "/img/cloudy.svg";
             break;
         case "Rain":
         case "Drizzle":
         case "Mist":
-            weatherImage.src = "img/rain.svg";
+            weatherImage.src = "/img/rain.svg";
             break;
         case "Thunderstorm":
-            weatherImage.src = "img/thunder.svg";
+            weatherImage.src = "/img/thunder.svg";
             break;
         case "Snow":
-            weatherImage.src = "img/snow.svg";
+            weatherImage.src = "/img/snow.svg";
             break;
         default: 
             weatherImage.src = ""
