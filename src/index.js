@@ -16,7 +16,7 @@ const input = document.querySelector("[data-search-input]")
 const search = document.querySelector(".search-button")
 
 async function getWeather(units, city) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=7470ed2b0f9dc40d12a6d5af68a85501`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=7470ed2b0f9dc40d12a6d5af68a85501`
     try {
         const response = await fetch(url, {mode: 'cors'});
         const data = await response.json();
